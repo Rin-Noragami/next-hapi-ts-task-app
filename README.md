@@ -1,23 +1,38 @@
-# Custom server using Hapi example
+This is a test problem to familiarize yourself with the Localie tech stack and try out what it is to build Localie.
 
-Most of the time the default Next.js server will be enough but there are times you'll want to run your own server to integrate into an existing application. Next.js provides [a custom server api](https://nextjs.org/docs/advanced-features/custom-server).
+## Getting Started
 
-Because the Next.js server is a Node.js module you can combine it with any other part of the node.js ecosystem. In this case we are using [Hapi](https://hapijs.com).
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/custom-server-hapi)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/custom-server-hapi)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+First, run the development server:
 
 ```bash
-npx create-next-app --example custom-server-hapi custom-server-hapi-app
-# or
-yarn create next-app --example custom-server-hapi custom-server-hapi-app
-# or
-pnpm create next-app -- --example custom-server-hapi custom-server-hapi-app
+# go to repository folder
+cd next-hapi-ts-task-app
+# install dependencies
+npm install
+# assemble the project
+npm run build
+# launch the application
+npm run start
 ```
+
+Open [http://localhost:5000](http://localhost:5000) with your browser to see the result.
+
+
+## Implementation
+
+Frontend:
+1. ReactJS
+2. NextJS
+3. styled-components
+4. TypeScript
+5. React Hooks
+
+Backend:
+1. NodeJS
+2. HapiJS
+3. TypeScript
+
+## Opportunities
+
+1. Create new task
+2. Check the task out

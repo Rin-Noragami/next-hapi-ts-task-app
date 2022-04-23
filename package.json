@@ -1,5 +1,6 @@
 {
-  "private": true,
+  "name": "next-hapi-ts-task",
+  "private": false,
   "scripts": {
     "dev": "nodemon",
     "build": "next build && tsc --project tsconfig.server.json",
@@ -10,7 +11,8 @@
     "cross-env": "^7.0.3",
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-components": "5.3.5"
   },
   "devDependencies": {
     "@types/hapi__hapi": "^20.0.10",
