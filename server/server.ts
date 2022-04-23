@@ -16,15 +16,15 @@ app.prepare().then(async () => {
     handler: nextHandlerWrapper(app) ,
   })
 
-/*server.route({
-    method: 'POST',
-    path:'/',
-    handler: function (request, reply) {
-       console.log(request.payload);
-       console.log(request.raw.req.headers);
-       payload: {}
-    },
-}); */
+/*  server.route({  
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+      var payload = request.payload   // <-- this is the important line
+  
+      return payload
+    }
+  }) */
 
   server.route({
     method: '*',

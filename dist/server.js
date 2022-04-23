@@ -18,18 +18,15 @@ app.prepare().then(async () => {
         path: '/_next/{p*}' /* next specific routes */,
         handler: (0, next_wrapper_1.nextHandlerWrapper)(app),
     });
-    server.route({
-        method: 'POST',
+    /*  server.route({
+        method: 'GET',
         path: '/',
-        handler: function (request, reply) {
-            console.log(request.payload);
-            console.log(request.raw.req.headers);
-            payload: {
-                todo: 'Todo';
-                toggleComplete: 'ToggleComplete';
-            }
-        },
-    });
+        handler: (request, h) => {
+          var payload = request.payload   // <-- this is the important line
+      
+          return payload
+        }
+      }) */
     server.route({
         method: '*',
         path: '/{p*}' /* catch all route */,
@@ -37,7 +34,7 @@ app.prepare().then(async () => {
     });
     try {
         await server.start();
-        console.log(`> Hey, ready on http://localhost:${port}`);
+        console.log(`> Hello, open http://localhost:${port}`);
     }
     catch (error) {
         console.log('Error starting server');
