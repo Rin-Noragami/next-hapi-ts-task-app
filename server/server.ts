@@ -12,25 +12,23 @@ const server = new Hapi.Server({
 app.prepare().then(async () => {
   server.route({
     method: 'GET',
-    path: '/_next/{p*}' /* next specific routes */,
-    handler: nextHandlerWrapper(app) ,
+    path: '/_next/{p*}',
+    handler: nextHandlerWrapper(app),
   })
-
-/*  server.route({  
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => {
-      var payload = request.payload   // <-- this is the important line
-  
-      return payload
-    }
-  }) */
 
   server.route({
     method: '*',
-    path: '/{p*}' /* catch all route */,
+    path: '/{p*}',
     handler: nextHandlerWrapper(app),
   })
+
+  server.route({
+    method: 'POST',
+    path: '/',
+    handler: function (request, h) {
+      return request.payload; /* print payload into the console */
+    }
+  });
 
   try {
     await server.start()
